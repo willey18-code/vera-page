@@ -152,6 +152,84 @@ body {
   }
 }
 
+/* === Collections Section === */
+.collections {
+  padding: 100px 10%;
+  text-align: center;
+  background: #ffffff; /* dark to match hero tone */
+  color: #000000;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 60px;
+  font-weight: 300;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.collection-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: pointer;
+  aspect-ratio: 3 / 4;
+}
+
+.collection-item img {
+  width: 100%;
+  height: 100%; /* Make image fill the card height */
+  object-fit: cover; /* Crop and fill nicely */
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.collection-item:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.collection-item:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: 400;
+  color: #f8f8f8;
+}
+
+.overlay .btn {
+  padding: 10px 25px;
+  border: 1px solid #fff;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.overlay .btn:hover {
+  background: #fff;
+  color: #000;
+}
 
 /* Scroll Animations */
 .fade-section {
