@@ -41,3 +41,9 @@ faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
 
+const exploreBtn = document.getElementById("exploreBtn");
+const collectionsSection = document.getElementById("collections");
+
+exploreBtn.addEventListener("click", () => {
+  collectionsSection.scrollIntoView({ behavior: "smooth" });
+});
